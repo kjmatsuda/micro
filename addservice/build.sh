@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/.bashrc
+. ~/.bashrc
 GITSHA=$(git rev-parse --short HEAD)
 
 case "$1" in
