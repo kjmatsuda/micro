@@ -1,5 +1,5 @@
 #!/bin/bash
-. ~/.bashrc
+source ~/.bashrc
 GITSHA=$(git rev-parse --short HEAD)
 
 case "$1" in
@@ -16,8 +16,8 @@ case "$1" in
         sed -e s/_NAME_/addservice/ -e s/_PORT_/8080/ \
             -e s/_IMAGE_/kjmatsuda\\/addservice:$GITSHA/ \
             < ../deployment/deployment-template.yml > dep.yml
-        sudo -i -u kjmatsuda kubectl apply -f $(pwd)/svc.yml
-        sudo -i -u kjmatsuda kubectl apply -f $(pwd)/dep.yml
+        sudo -i -u koji kubectl apply -f $(pwd)/svc.yml
+        sudo -i -u koji kubectl apply -f $(pwd)/dep.yml
     ;;
     *)
         echo invalid build step
