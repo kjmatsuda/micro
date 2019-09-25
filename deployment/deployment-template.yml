@@ -7,10 +7,13 @@ spec:
   template:
     metadata:
       labels:
-      run: _NAME_
+        run: _NAME_
   spec:
     containers:
     - name: _NAME_
       image: _IMAGE_
       ports:
       - containerPort: _PORT_
+    selector:
+      run: _NAME_
+        
