@@ -1,4 +1,5 @@
 .DS_Store
+.tern-port
 *.log
 node_modules
 npm-debug.log
