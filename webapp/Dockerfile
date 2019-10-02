@@ -4,4 +4,4 @@ WORKDIR /home/node/service
 COPY package.json /home/node/service
 RUN npm install
 COPY . /home/node/service
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]
