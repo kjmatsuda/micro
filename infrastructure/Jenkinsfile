@@ -1,0 +1,21 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
+    stage('DeployMongo'){
+      steps {
+        sh '. ~/.bashrc && cd infrastructure && sh build.sh mongo'
+      }
+    }
+    stage('DeployRedis'){
+      steps {
+        sh '. ~/.bashrc && cd infrastructure && sh build.sh redis'
+      }
+    }
+  }
+}
