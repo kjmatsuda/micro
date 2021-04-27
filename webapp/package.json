@@ -12,7 +12,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "restify": "^8.3.2",
     "restify-clients": "^2.6.4"
   }
